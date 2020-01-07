@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: nginx
+  name: nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: nginx
+  template:
+    metadata:
+      labels:
+        run: nginx
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+        env:
+        # Alibaba Cloud Log Service Settings [aliyun_logs_<LOG_STORE_NAME>].
+        - name: aliyun_logs_
+          value: stdout
