@@ -1,7 +1,5 @@
 # guestbook
 
----
-
 Guest book is well known sample application for kubernetes.  
 This kubernetes manifest was changed to use following resources.
 
