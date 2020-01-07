@@ -2,7 +2,7 @@
 
 ---
 This smple application use Log Service of Alibaba Cloud in deployment.yaml.  
-If you will use this manifest file you have to add <YORE_ALIBABA_CLOD_LOGSTORE_NAME> after create log store in Log Service of Alibaba Cloud.  
+If you will use this manifest file you have to add <LOG_STORE_NAME> after create log store in Log Service of Alibaba Cloud.  
 Please see documentation about log service of Alibaba Cloud.  
 https://jp.alibabacloud.com/help/doc-detail/87540.htm
 
