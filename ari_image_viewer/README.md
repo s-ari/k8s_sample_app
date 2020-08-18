@@ -1,7 +1,7 @@
 # Ari Image Viewer
 
 This app is simple test app for kubernetes using php, apache and mysql.  
-You must not use production environment because some include bad practices in thes app.  
+You must not use production environment because some include bad practices in this app.  
 Especially, The app uses database on container without persistent volume and insert binary image data in mysql.  
 In case application uses image data normally, insert link path of image data in database and get images from other storage.
 
