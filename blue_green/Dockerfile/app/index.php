@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta charset=UFT-8>
-<title>Blue Green APP</title>
+<title>Blue Green App</title>
 <style>
     body {
         background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
