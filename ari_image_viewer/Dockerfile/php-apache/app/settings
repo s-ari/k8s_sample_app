@@ -1,0 +1,4 @@
+dbname=image_db
+host=172.17.0.5
+user=root
+pw=secret-pw

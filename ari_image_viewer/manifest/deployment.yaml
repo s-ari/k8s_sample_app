@@ -1,0 +1,66 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: app
+  name: app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app
+  template:
+    metadata:
+      labels:
+        app: app
+    spec:
+      containers:
+      - image: arimas/aiv_app
+        name: aiv-app-4bxmv
+        env:
+        - name: dbname
+          valueFrom:
+            secretKeyRef:
+              name: db-user
+              key: dbname
+        - name: host
+          valueFrom:
+            secretKeyRef:
+              name: db-user
+              key: host
+        - name: user
+          valueFrom:
+            secretKeyRef:
+              name: db-user
+              key: user
+        - name: pw
+          valueFrom:
+            secretKeyRef:
+              name: db-user
+              key: pw
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: db
+  name: db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: db
+  template:
+    metadata:
+      labels:
+        app: db
+    spec:
+      containers:
+      - image: arimas/aiv_db
+        name: aiv-db-2sx6l
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: db-user
+              key: pw
