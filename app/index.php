@@ -21,8 +21,8 @@
 </head>
 <body>
     <?php
-        // color is blue or green
-        $color = "green";
+        // color can set blue or green
+        $color = "blue";
 
         $word = getenv('OUTPUT_WORD');
         echo '<div class=word>';
