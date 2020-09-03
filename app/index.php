@@ -22,7 +22,7 @@
 <body>
     <?php
         // color can set blue or green
-        $color = "blue";
+        $color = "green";
 
         $word = getenv('OUTPUT_WORD');
         echo '<div class=word>';
