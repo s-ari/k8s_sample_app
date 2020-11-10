@@ -15,10 +15,11 @@ spec:
         app: blue-green
     spec:
       containers:
-      - image: arima-registry-vpc.ap-southeast-1.cr.aliyuncs.com/app/blue-green:latest
-      #- image: arimas/blue_green:latest
-        name: blue-green
+      - name: blue-green
+        image: arimas/blue_green:latest
         imagePullPolicy: Always
         env:
         - name: OUTPUT_WORD
           value: "Demo App"
+      - name: apache-exporter
+        image: lusotycoon/apache-exporter

@@ -12,3 +12,19 @@ spec:
   selector:
     app: blue-green
   type: LoadBalancer
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: apache-exporter
+  name: apache-exporter
+spec:
+  ports:
+  - name: apache-exporter
+    port: 9117
+    protocol: TCP
+    targetPort: 9117
+  type: ClusterIP
+  selector:
+    app: blue-green
